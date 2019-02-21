@@ -13,4 +13,4 @@ Feature: Visitor can sign up
 			When I fill in "Email" with "my@mail.com"
 			And I fill in "Password" with "password"
 			And I fill in "Password confirmation" with "password"
-			And I click on "Sign up"
+			And I click on "Sign up" 
