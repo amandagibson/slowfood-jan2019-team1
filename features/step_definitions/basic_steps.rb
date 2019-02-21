@@ -13,17 +13,17 @@ Given("the following products exist") do |table|
 end
 
 Given("the following user exist") do |table|
-  table.hashes.each do |user|
+	table.hashes.each do |user|
 		FactoryBot.create(:user, user)
 	end
 end
 
 When("I fill in {string} with {string}") do |field, value|
-		fill_in field, with: value
+	fill_in field, with: value
 end
 
 Given("I click on {string}") do |button|
-  click_on button
+	click_on button
 end
 
 Given("I visit the signup page") do
