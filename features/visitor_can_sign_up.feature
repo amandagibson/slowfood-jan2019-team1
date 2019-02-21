@@ -3,10 +3,10 @@ Feature: Visitor can sign up
   In order to finalise an order
   I would like to be able to sign up
 
-		Background: 
+		Background:
 		  Given the following user exist
-		  | email          |  password   | 
-		  | my@mail.com    |  password   | 
+		  | email          |  password   |
+		  | my@mail.com    |  password   |
 			And I visit the signup page
 
 		Scenario: User can sign up
@@ -14,4 +14,3 @@ Feature: Visitor can sign up
 			And I fill in "Password" with "password"
 			And I fill in "Password confirmation" with "password"
 			And I click on "Sign up"
-			Then I should see "Welcome! You have signed up successfully."
