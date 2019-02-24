@@ -3,7 +3,10 @@ Given("I visit the landing page") do
 end
 
 When("I fill in {string} with {string}") do |field, content|
-    fill_in field, with: content
+    form = find_all('.general-form').first
+        within form do
+        fill_in field, with: content
+    end
 end
 
 When("I click on {string}") do |element|
