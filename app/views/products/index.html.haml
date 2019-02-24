@@ -1,3 +1,7 @@
+= link_to "Sign up", new_user_registration_path unless current_page? new_user_registration_path
+= link_to "Login", new_user_session_path
+= checkout_link
+= shop_icon_quantity
 .wrapper
     %ul#products
         %table
