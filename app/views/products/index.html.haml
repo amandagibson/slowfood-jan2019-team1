@@ -1,5 +1,10 @@
 .wrapper
-    - @products.each do  |product|
-        %h3= product.name
-        %p= product.description
-        %p= "#{product.price} kr"
+    %ul#products
+        %table
+            - @products.each do |product|
+                %tr{id: dom_id(product)}
+                    %td= product.name
+                    %td= "#{product.price} SEK"
+                    %td= product.description
+                    %td= add_to_cart(product, 1, "Add to cart")
+                %end

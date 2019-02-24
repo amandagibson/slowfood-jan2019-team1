@@ -8,12 +8,13 @@
     = javascript_include_tag 'application', data: {'turbolinks-track' => 'reload'}
   %body
     #notifications
-      = alert 
+      = alert
       = notice
     - if notice
       %p.alert.alert-success= notice
     - if alert
       %p.alert.alert-danger= alert
+    = shop_icon_quantity
     = link_to "Sign up", new_user_registration_path unless current_page? new_user_registration_path
-    = link_to "Login", new_user_session_path 
+    = link_to "Login", new_user_session_path
     = yield
