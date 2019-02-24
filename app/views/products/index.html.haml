@@ -4,7 +4,7 @@
             - @products.each do |product|
                 %tr{id: dom_id(product)}
                     %td= product.name
-                    %td= "#{product.price} SEK"
+                    %td= "#{product.price} kr"
                     %td= product.description
                     %td= add_to_cart(product, 1, "Add to cart")
                 %end

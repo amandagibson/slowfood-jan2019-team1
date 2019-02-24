@@ -17,4 +17,4 @@ Feature: Visitor can add products to cart
         Given I visit the landing page
         And I click on "Add to cart" on "Pizza"
         Then I should see "1 item"
-        
+        When I click on "Proceed to checkout"
