@@ -1,3 +1,5 @@
+@javascript
+
 Feature: Visitor can add products to cart
 
     As a visitor,
@@ -9,9 +11,10 @@ Feature: Visitor can add products to cart
         | name  | description     | price |
         | Pizza | soft and fluffy | 100   |
         | Pasta | Tender and rich | 90    |
-        
+
 
 
     Scenario: Visitor can add products to cart
         Given I visit the landing page
-        And I click on "Add to cart"
+        And I click on "Add to cart" on "Pizza"
+        Then I should see "1 item"
