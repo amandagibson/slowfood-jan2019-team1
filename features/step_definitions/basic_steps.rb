@@ -1,13 +1,23 @@
+Given("I visit the landing page") do
+    visit root_path
+end
+
+When("I fill in {string} with {string}") do |field, content|
+    fill_in field, with: content
+end
+
+When("I click on {string}") do |element|
+    click_on element
+end
+
 Given("the following products exist") do |table|
     table.hashes.each do |product|
         FactoryBot.create(:product, product)
-    end 
-end
-  
-Given("I visit the landing page") do
-  visit root_path
+    end
 end
 
-Then("I should see {string}") do |value|
-  expect(page).to have_content value
+Given("the following user exists") do |table|
+    table.hashes.each do |user|
+        FactoryBot.create(:user, user)
+    end
 end

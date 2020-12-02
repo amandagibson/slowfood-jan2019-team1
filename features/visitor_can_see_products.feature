@@ -3,11 +3,11 @@ Feature: Visitor can see products on landing page
     In order to get an overview of the restaurants products
     I would like to be able to see a menu
 
-    Background: 
+    Background:
         Given the following products exist
-            | name  | description     | price |
-            | Pizza | soft and fluffy | 100   | 
-            | Pasta | Tender and rich | 90    | 
+        | name  | description     | price |
+        | Pizza | soft and fluffy | 100   |
+        | Pasta | Tender and rich | 90    |
 
     Scenario: Visitor can see a list of products
         Given I visit the landing page

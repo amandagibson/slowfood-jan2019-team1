@@ -1,4 +1,6 @@
 require 'cucumber/rails'
+require 'coveralls'
+Coveralls.wear_merged!('rails')
 ActionController::Base.allow_rescue = false
 begin
   DatabaseCleaner.strategy = :transaction
@@ -21,4 +23,3 @@ Capybara.register_driver :selenium do |app|
 end
 Capybara.javascript_driver = :selenium
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
